@@ -13,19 +13,31 @@ section{
 	width: 	40em;
 	min-height: 13em;
 }
-#next, #next2{
+#next, #next2{	
 	float: right;
 	width: 12em;
+
 }
 #back,  #back2{
-width: 12em;	
+width: 12em;
+
 }
 #ventana1, #ventana2, #ventana3 { 
 	min-height:30em;
 }
+
+
 #ventana2{
 	display: none;
 }
 #ventana3{
 	display:none;
+}
+.boton{	
+	
+	bottom: -200px;	        
+    position: relative; 
+    
+
+
 }
