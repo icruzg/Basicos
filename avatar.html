@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Avatar</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/avatar.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script>
+		function Siguiente(no_ventana, step){		   
+			var vent_ = no_ventana.substring(0,8);
+			var num = no_ventana.substring(no_ventana.length - 1);
+			num = parseInt(num) + step ;
+	    	//$(no_ventana).toggle("slow");
+	    	$(no_ventana).hide();
+			vent_+=num; 
+       	  	//console.log(num+ "   - > " +vent_);
+			$(vent_).toggle("slow");	
+			$(vent_).css({'display': 'block'});
+			//$(no_ventana).css({'display': 'none'});      
+		}
+
+		$(document).ready(function(){
+    		$("#next").click(function () {            	
+            	setTimeout(Siguiente("#ventana1",1),800);
+        	});
+        	$("#back").click(function () {
+        		setTimeout(Siguiente("#ventana2",-1),800);            	
+        	});        	
+            $("#next2").click(function () {            	
+            	setTimeout(Siguiente("#ventana2",1),800);
+        	});
+        	$("#back2").click(function () {
+        		setTimeout(Siguiente("#ventana3",-1),800);            	
+        	});
+		});
+
+</script>
+</head>
+<body>
+	<header>
+		<h1>Configurando Avatar...</h1>
+	</header>
+	<section>
+		<article id ="ventana1" class="panel panel-primary">
+		 	<div class="panel-heading"><h3 class="panel-title">Datos personales</h3></div>
+		 	<div class="panel-body">
+			<form method="action" class="" >			    		    			
+					<p><input  class="form-control" type="text" id="nick" placeholder="escribe tu nombre o apodo">	</p>
+					<p><select class="form-control" >
+   						 <option selected="selected">selecciona tu genero </option>
+   						 <option>Masculino</option>
+   						 <option>Femenino</option>
+					</select></p>				
+				    <p class="boton"><button class="btn btn-info" id ="next" type="button">Siguiente</button></p>
+				 </form>
+				 </div>
+		</article>
+
+		<article id ="ventana2" class="panel panel-primary">
+		 	<div class="panel-heading"><h3 class="panel-title">Datos Ventana 2</h3></div>
+		 	<div class="panel-body">
+			<form method="action" class="" >
+					<p><input  class="form-control" type="text" id="nick" placeholder="correo electronico">	</p>		    
+				    <p class="boton">
+				    	<button class="btn btn-info" id ="back" type="button">Atras</button>
+					    <button class="btn btn-info" id ="next2" type="button">Siguiente</button>
+				    </p>
+				 </form>
+				 </div>
+		</article>		
+
+		<article id ="ventana3" class="panel panel-primary">
+		 	<div class="panel-heading"><h3 class="panel-title">Datos Ventana 3</h3></div>
+		 	<div class="panel-body">
+			<form method="action" class="" >
+					<p><input  class="form-control" type="text" id="nick" placeholder="numero de cuenta">	</p>		    
+					<p><input  class="form-control" type="text" id="nick" placeholder="clave interbancaria">	</p> 
+				    <p class="boton">
+				    	<button class="btn btn-info" id ="back2" type="button">Atras</button>
+					    <button class="btn btn-info" id ="next2" type="button">Finalizar</button>
+				    </p>
+				 </form>
+				 </div>
+		</article>		
+	</section>
+</body>
+</html>

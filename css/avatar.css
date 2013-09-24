@@ -1,0 +1,31 @@
+body{
+	font-size: 16px;
+}
+section{
+	width: 40em;	
+	margin: 0 auto;
+}
+#datos_per{
+	border: 0.1em solid #c8c8c8;
+	border-radius: 0.9em;
+	margin: 0 auto;
+	padding: 2em;
+	width: 	40em;
+	min-height: 13em;
+}
+#next, #next2{
+	float: right;
+	width: 12em;
+}
+#back,  #back2{
+width: 12em;	
+}
+#ventana1, #ventana2, #ventana3 { 
+	min-height:30em;
+}
+#ventana2{
+	display: none;
+}
+#ventana3{
+	display:none;
+}
